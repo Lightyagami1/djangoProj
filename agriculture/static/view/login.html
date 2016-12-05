@@ -1,0 +1,29 @@
+<html>
+    {% load static %}
+      <link rel="stylesheet" href="{% static "agriculture/css/mainloginform.css" %}" />
+	  <ul>
+	    <li><a href="/agriculture/">Home</a></li>
+	    <li style="float:right"><a class="active" href="/agriculture/login">Sign In</a></li>
+	  </ul>
+	  <br>
+
+	<head>
+		Student Login<br>
+		<br>
+	</head>
+	<body>
+    {% if flag == 0 %}
+      <p> incorrect credentials</p>
+    {% endif %}
+
+		<form action="/agriculture/loginAuth/" method="post">{% csrf_token %}
+			<label for='Username'></label>
+			<input id="Username" type="string" placeholder = username name="username" required></input>
+			<br><br>
+			<label for='Password'></label>
+			<input id="Password" placeholder="password" type="password" name="password" required></input><br><br><br>
+			<input type="submit" value=" Login "> </input>
+		</form>
+
+	</body>
+</html>

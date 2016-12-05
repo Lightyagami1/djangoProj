@@ -1,0 +1,34 @@
+<html>
+<head>
+  Update the address
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+    <link rel="stylesheet" href="{% static "agriculture/css/main0.css" %}" />
+
+
+
+</head>
+
+<body>
+  <h2>Enter the new address</h2>
+
+  <form action="/agriculture/updateaddressfinal/" method="post">{% csrf_token %}
+    <label for="add1">Address1</label>
+    <input id="add1" type="text" name="add1"></input>
+
+    <br>
+    <label for="add2">Address2</label>
+    <input id="add2" type="text" name="add2"></input>
+
+    <br>
+    <label for="city">city name</label>
+    <input id="city" type="text" name="city"></input>
+
+    <br>
+    <input type="submit" value="ok"></input>
+
+  </form>
+</body>
+</html>

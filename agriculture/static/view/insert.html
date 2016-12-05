@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cover Template for Agriculture Department</title>
+
+    {% load static %}
+      <link rel="stylesheet" href="{% static "agriculture/css/main0.css" %}" />
+
+  </head>
+
+  <body>
+                <ul>
+                  <li><a href="/agriculture/">Home</a></li>
+                  <li style="float:right"><a class="active" href="/agriculture/insertCall">Sign Up</a></li>
+                </ul>
+<div class = "row">
+    <div class="col-8">
+              <h3>Please enter required information</h3>
+
+              {{ss}}
+
+            <form action="/agriculture/insert" method="post">{% csrf_token %}
+                  <p><p>
+                  <div>
+                      First Name <br>
+                      <input type="text" namespace="first name" name="firstName" required><br>
+                      Last Name <br>
+                      <input type="text" name="secondName" required>
+                  </div>
+                  <div>
+                      Gender<br>
+                      <input type="radio" name="gender" value="male" checked> Male<br>
+                      <input type="radio" name="gender" value="female"> Female<br>
+                  </div>
+                  <div>
+                      Address<br>
+                      <input type="text" name="address1" required placeholder="address1">
+                      <input type="text" name="address2" required placeholder = "address2">
+                      <input type="text" name="city" required placeholder="city">
+                </div>
+                <div>
+                    Employee Id <br>
+                    <input type="text" placeholder="Employee Id" name="empId" required><br>
+
+                    date of birth format:"year-month-day"<br>
+                    <input type="date" placeholder="Date of Birth" name="dob" required><br>
+                    JoiningDate format:"year-month-day"<br>
+                    <input type="date" name="joiningDate" required><br>
+
+                    Qualification<br>
+                    <input type="text" name="qualification" required><br>
+               </div>
+                  Department<br>
+                  <select name="department">
+                      <option value="Plant Physiology">Plant Physiology</option>
+                      <option value="Agronomy">Agronomy</option>
+                      <option value="Genetics & Plant Breeding">Genetics & Plant Breeding</option>
+                      <option value="Soil Science & Agriculture Chemistry">Soil Science & Agriculture Chemistry</option>
+                      <option value="Plant Pathology">Plant Pathology</option>
+                      <option value="Horticulture">Horticulture</option>
+                      <option value="Entomology">Entomology</option>
+                      <option value="Agriculture Zoology">Agriculture Zoology</option>
+                      <option value="Animal Husbandry & Dairy Farming">Animal Husbandry & Dairy Farming</option>
+                      <option value="Farm Engineering">Farm Engineering</option>
+                  </select><br>
+                  Contact No.<br>
+                  <input type="text" name="contactNo" required><br>
+                  E-mail:<br>
+                  <input type="email" name="email" required><br>
+                  <br>
+                  User name<br>
+                  <input type="text" name="userName" required><br>
+                  Password<br>
+                  <input type="password" name="password" required><br>
+              <div>
+                  <input type="submit" name="Submit">
+                  <input type="reset">
+              </div>
+
+
+        </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>

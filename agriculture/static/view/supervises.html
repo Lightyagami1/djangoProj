@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+      <link rel="stylesheet" href="{% static "agriculture/css/main0.css" %}" />
+</head>
+
+<body>
+    {{ss}}
+  <h2>Enter supervisor and task</h2>
+
+  <form action="/agriculture/supervisesfin/" method="post">{% csrf_token %}
+    <label for="supervisor">supervisor Id</label>
+    <input id="supervisor" type="text" name="supervisor" required></input>
+
+    <br>
+    <label for="supervised">supervised Id</label>
+    <input id="supervised" type="text" name="supervised" required></input>
+
+    <br>
+    <label for="task">task</label>
+    <input id="task" type="text" name="task" required></input>
+
+    <br>
+    <input type="submit" value="ok"></input>
+
+  </form>
+</body>
+</html>
